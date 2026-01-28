@@ -242,16 +242,3 @@ export default function Home() {
     </div>
   );
 }
-
-export const metadata: Metadata = {
-  title: "Domus - Dashboard",
-  openGraph: {
-    type: "website",
-    url: "https://example.com",
-    title: "Domus Website",
-    description: "A housing website for both house hunters and agents",
-    siteName: "Domus Website",
-    images: [{ url: "https://example.com/og.png" }],
-  },
-  description: " Browse, pay, expolre",
-};
