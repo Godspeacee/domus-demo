@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+//import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Select } from "@radix-ui/themes";
 
 const states = [
@@ -46,20 +46,20 @@ const states = [
 ];
 
 const PropertyStateFilter = () => {
-  const router = useRouter();
-  const params = useSearchParams();
-  const pathName = usePathname();
+  //const router = useRouter();
+  // const params = useSearchParams();
+  //const pathName = usePathname();
 
-  const current = params.get("state") || "";
-  const handleChange = (value: string) => {
-    const newParams = new URLSearchParams(params.toString());
-    if (value === "All") newParams.delete("state");
-    else newParams.set("state", value);
-    router.push(`${pathName}?${newParams.toString()}`);
-  };
+  //const current = params.get("state") || "";
+  // const handleChange = (value: string) => {
+  //   const newParams = new URLSearchParams(params.toString());
+  //  if (value === "All") newParams.delete("state");
+  //  else newParams.set("state", value);
+  //  router.push(`${pathName}?${newParams.toString()}`);
+  //};
 
   return (
-    <Select.Root value={current} onValueChange={handleChange}>
+    <Select.Root>
       <Select.Trigger placeholder="State" />
       <Select.Content>
         {states.map((state) => (
